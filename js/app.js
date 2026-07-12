@@ -18,12 +18,12 @@ const boxFastMusic = $.querySelector('#boxFastMusic')
 
 
 const listMusic = [
-    { id: 1, name: 'Dehaati', src: '../music/01Dehaati.mp3', singer: 'Shadmehr Aghili', cover: '../img/ShadmehrAghili-Dehati.jpg', Albom: 'Dehaati' },
-    { id: 2, name: 'Khiali Nist', src: '../music/01KhialiNist.mp3', singer: 'Shadmehr Aghili', cover: '../img/ShadmehrAghili-KhialiNist.jpg', Albom: 'Khiali Nist' },
-    { id: 3, name: 'kabeh', src: '../music/01Kabeh.mp3', singer: 'Moein', cover: '../img/Moein-Kabeh.jpg', Albom: 'Kabeh' },
-    { id: 4, name: 'Mosafer', src: '../music/01Mosafer.mp3', singer: 'Shadmehr Aghili', cover: '../img/ShadmehrAghili-Mosafer.jpg', Albom: 'Mosafer' },
-    { id: 5, name: 'Taghdir', src: '../music/01Taghdir.mp3', singer: 'Shadmehr Aghili', cover: '../img/ShadmehrAghili-Mosafer.jpg', Albom: 'Taghdir' },
-    { id: 6, name: 'Navaei', src: '../music/03Navaei.mp3', singer: 'Shadmehr Aghili', cover: '../img/ShadmehrAghili-Dehati.jpg', Albom: 'Dehaati' },
+    { id: 1, name: 'Dehaati', src: 'music/01Dehaati.mp3', singer: 'Shadmehr Aghili', cover: 'img/ShadmehrAghili-Dehati.jpg', Albom: 'Dehaati' },
+    { id: 2, name: 'Khiali Nist', src: 'music/01KhialiNist.mp3', singer: 'Shadmehr Aghili', cover: 'img/ShadmehrAghili-KhialiNist.jpg', Albom: 'Khiali Nist' },
+    { id: 3, name: 'kabeh', src: 'music/01Kabeh.mp3', singer: 'Moein', cover: 'img/Moein-Kabeh.jpg', Albom: 'Kabeh' },
+    { id: 4, name: 'Mosafer', src: 'music/01Mosafer.mp3', singer: 'Shadmehr Aghili', cover: 'img/ShadmehrAghili-Mosafer.jpg', Albom: 'Mosafer' },
+    { id: 5, name: 'Taghdir', src: 'music/01Taghdir.mp3', singer: 'Shadmehr Aghili', cover: 'img/ShadmehrAghili-Mosafer.jpg', Albom: 'Taghdir' },
+    { id: 6, name: 'Navaei', src: 'music/03Navaei.mp3', singer: 'Shadmehr Aghili', cover: 'img/ShadmehrAghili-Dehati.jpg', Albom: 'Dehaati' },
 ]
 
 
@@ -52,6 +52,7 @@ function setData(e) {
             rangeMusic.addEventListener("input", () => {
                 file_music.currentTime = rangeMusic.value;
             });
+            console.log(event.cover)
         }
     })
 }
