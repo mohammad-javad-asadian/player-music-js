@@ -9,6 +9,7 @@ const txt_timeMusic_end = $.querySelector('#txt_timeMusic_end')
 const file_music = $.querySelector('#file_music')
 const btn_skip_previous = $.querySelector('#btn_skip_previous')
 const btn_play_circle = $.querySelector('#btn_play_circle')
+const btn_pause_circle = $.querySelector('#btn_pause_circle')
 const btn_skip_next = $.querySelector('#btn_skip_next')
 const btn_fast_forward = $.querySelector('#btn_fast_forward')
 const btn_repeat = $.querySelector('#btn_repeat')
@@ -62,7 +63,10 @@ function playMusic(e) {
     e.play()
     btn_play_circle.style.scale = 1.2
     imgCoverMusic.style.animation = 'cover 10s linear infinite'
-    btn_play_circle.setAttribute('src', '/svg/pause_circle.svg')
+    btn_play_circle.classList.remove('visible')
+    btn_play_circle.classList.add('hidden')
+    btn_pause_circle.classList.remove('hidden')
+    btn_pause_circle.classList.add('visible')
 }
 
 function pauseMusic(e) {
@@ -70,7 +74,10 @@ function pauseMusic(e) {
     e.pause()
     btn_play_circle.style.scale = 1
     imgCoverMusic.style.animationPlayState = "paused";
-    btn_play_circle.setAttribute('src', '/svg/play_circle.svg')
+    btn_play_circle.classList.remove('hidden')
+    btn_play_circle.classList.add('visible')
+    btn_pause_circle.classList.remove('visible')
+    btn_pause_circle.classList.add('hidden')
 }
 
 function checkPlay() {
@@ -152,6 +159,7 @@ function updateTime() {
 }
 
 btn_play_circle.addEventListener('click', checkPlay)
+btn_pause_circle.addEventListener('click', checkPlay)
 btn_skip_next.addEventListener('click', setNextMusic)
 btn_skip_previous.addEventListener('click', setPreviousMusic)
 btn_repeat.addEventListener('click', repeatMusic)
