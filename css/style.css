@@ -1,8 +1,12 @@
+body {
+  overflow: hidden;
+}
 body::before {
   content: "";
   position: absolute;
   inset: 0;
   opacity: 0.09;
+  overflow: hidden;
   background-image: url(../public/image/Shadmehr\ Aghili\ -\ Dehati.jpg);
   background-size: cover;
 }
@@ -10,6 +14,15 @@ body::before {
 .card {
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.cardFast {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .shadowCard {
@@ -91,6 +104,20 @@ input[type="range"]::-webkit-slider-thumb:hover {
     width: 60px;
     height: 60px;
   }
+  .shadowCard {
+    transform: perspective(800px) rotateX(80deg) skewX(-20deg)
+      translateY(-320px) translateX(-320px);
+    filter: blur(50px);
+    -webkit-transform: perspective(800px) rotateX(80deg) skewX(-20deg)
+      translateY(-320px) translateX(10px);
+    -moz-transform: perspective(800px) rotateX(80deg) skewX(-20deg)
+      translateY(-320px) translateX(10px);
+    -ms-transform: perspective(800px) rotateX(80deg) skewX(-20deg)
+      translateY(-320px) translateX(10px);
+    -o-transform: perspective(800px) rotateX(80deg) skewX(-20deg)
+      translateY(-320px) translateX(10px);
+    -webkit-filter: blur(50px);
+  }
 }
 
 @media (width < 360px) {
@@ -104,6 +131,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
   .card > div {
     width: 60px;
     height: 60px;
+  }
+  .shadowCard {
+    display: none;
   }
 }
 

@@ -14,6 +14,7 @@ const btn_fast_forward = $.querySelector('#btn_fast_forward')
 const btn_repeat = $.querySelector('#btn_repeat')
 const btn_replay = $.querySelector('#btn_replay')
 const rangeMusic = $.querySelector('#rangeMusic')
+const boxFastMusic = $.querySelector('#boxFastMusic')
 
 
 const listMusic = [
@@ -30,6 +31,7 @@ let isPlay = false
 let isRepeat = false
 let isFastMusic = false
 let idMusic = 1
+let valuePlayBackRate = 1
 
 
 function setData(e) {
@@ -127,14 +129,15 @@ function replayMusic() {
 function fastPlayMusic() {
     if (!isFastMusic) {
         btn_fast_forward.style.scale = 1.2
-        file_music.playbackRate = 2
         isFastMusic = true
-        console.log(isFastMusic);
+        boxFastMusic.classList.remove('hidden')
+        boxFastMusic.classList.add('flex')
     } else {
         isFastMusic = false
-        console.log(isFastMusic);
-        file_music.playbackRate = 1
+        file_music.playbackRate = valuePlayBackRate
         btn_fast_forward.style.scale = 1
+        boxFastMusic.classList.remove('flex')
+        boxFastMusic.classList.add('hidden')
     }
 }
 
@@ -156,3 +159,11 @@ btn_fast_forward.addEventListener('click', fastPlayMusic)
 file_music.addEventListener("timeupdate", updateTime);
 
 window.onload = setData(listMusic)
+
+
+
+boxFastMusic.addEventListener('click', (e) => {
+    valuePlayBackRate = e.target.innerHTML.trim()
+    fastPlayMusic()
+})
+
