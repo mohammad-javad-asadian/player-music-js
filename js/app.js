@@ -62,7 +62,7 @@ function playMusic(e) {
     e.play()
     btn_play_circle.style.scale = 1.2
     imgCoverMusic.style.animation = 'cover 10s linear infinite'
-    btn_play_circle.setAttribute('src', '../svg/pause_circle.svg')
+    btn_play_circle.setAttribute('src', '/svg/pause_circle.svg')
 }
 
 function pauseMusic(e) {
@@ -70,7 +70,7 @@ function pauseMusic(e) {
     e.pause()
     btn_play_circle.style.scale = 1
     imgCoverMusic.style.animationPlayState = "paused";
-    btn_play_circle.setAttribute('src', '../svg/play_circle.svg')
+    btn_play_circle.setAttribute('src', '/svg/play_circle.svg')
 }
 
 function checkPlay() {

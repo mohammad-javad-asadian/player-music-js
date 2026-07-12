@@ -1,4 +1,6 @@
 body {
+  width: 98dvw;
+  height: 98dvh;
   overflow: hidden;
 }
 body::before {
