@@ -1,0 +1,84 @@
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.09;
+  background-image: url(../public/image/Shadmehr\ Aghili\ -\ Dehati.jpg);
+  background-size: cover;
+}
+main {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 80%;
+  height: 10px;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #333333;
+  margin-top: -6px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #000000;
+}
+
+@media (width < 420px) {
+  main {
+    width: 350px;
+  }
+  .card {
+    width: 350px;
+    height: 350px;
+  }
+  .card > div {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (width < 360px) {
+  main {
+    width: 300px;
+  }
+  .card {
+    width: 310px;
+    height: 310px;
+  }
+  .card > div {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@keyframes cover {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 3600deg;
+  }
+}
