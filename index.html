@@ -15,19 +15,19 @@
       class="w-[450px] border-2 flex items-center justify-center flex-col bg-gray-800 gap-5 p-5 max-sm:w-[400px]"
     >
       <section
-        class="w-full flex items-center justify-between flex-row-reverse font-light uppercase"
+        class="w-full flex items-center justify-between flex-row font-light uppercase"
       >
-        <p>2026</p>
-        <p>2026</p>
+        <p id="txtNameAllbom"></p>
+        <p id="txtNameSinger"></p>
       </section>
       <section>
         <!-- <div class="card"></div> -->
         <div
           class="card w-[400px] h-[400px] bg-gray-400 rounded-full flex items-center justify-center max-sm:w-[410px] max-sm:h-[410px] overflow-hidden flex-col-reverse"
+          id="imgCoverMusic"
         >
-          <input type="file" class="scale-[100] opacity-0" id="ChangeFiles" />
           <div
-            class="w-[80px] h-[80px] bg-gray-50 rounded-full max-sm:w-[80px] max-sm:h-[80px] mt-5"
+            class="w-[80px] h-[80px] bg-gray-50 rounded-full max-sm:w-[80px] max-sm:h-[80px]"
           ></div>
         </div>
       </section>
@@ -35,31 +35,31 @@
         <div
           class="w-full flex items-center justify-between font-light uppercase"
         >
-          <p id="txt_timeMusic_start">2026</p>
-          <h3 class="text-3xl font-bold">2026</h3>
-          <p id="txt_timeMusic_end">2026</p>
+          <p id="txt_timeMusic_start"></p>
+          <h3 class="text-3xl font-bold" id="txtNameMusic"></h3>
+          <p id="txt_timeMusic_end"></p>
         </div>
         <div class="w-full flex items-center justify-center">
-          <input type="range" class="" />
+          <input type="range" class="" id="rangeMusic" />
           <audio src="./public/music/01 Dehaati.mp3" id="file_music"></audio>
         </div>
         <div class="w-full flex items-center justify-between">
           <img
             src="./svg/skip_previous.svg"
             alt="btn_skip_previous"
-            class="cursor-pointer"
+            class="cursor-pointer transition-all"
             id="btn_skip_previous"
           />
           <img
             src="./svg/play_circle.svg"
             alt="btn_play_circle"
-            class="visible cursor-pointer"
+            class="visible cursor-pointe transition-allr"
             id="btn_play_circle"
           />
           <img
             src="./svg/skip_next.svg"
             alt="btn_skip_next"
-            class="cursor-pointer"
+            class="cursor-pointer transition-all"
             id="btn_skip_next"
           />
         </div>
@@ -67,19 +67,19 @@
           <img
             src="./svg/fast_forward.svg"
             alt="btn_fast_forward"
-            class="cursor-pointer"
+            class="cursor-pointer transition-all"
             id="btn_fast_forward"
           />
           <img
             src="./svg/repeat.svg"
             alt="btn_repeat"
-            class="cursor-pointer"
+            class="cursor-pointer transition-all"
             id="btn_repeat"
           />
           <img
             src="./svg/replay.svg"
             alt="btn_replay"
-            class="cursor-pointer"
+            class="cursor-pointer transition-all"
             id="btn_replay"
           />
         </div>

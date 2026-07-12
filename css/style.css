@@ -6,6 +6,12 @@ body::before {
   background-image: url(../public/image/Shadmehr\ Aghili\ -\ Dehati.jpg);
   background-size: cover;
 }
+
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 main {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -79,6 +85,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
     rotate: 0deg;
   }
   100% {
-    rotate: 3600deg;
+    rotate: 360deg;
   }
 }
